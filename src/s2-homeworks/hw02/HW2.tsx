@@ -35,28 +35,26 @@ export const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: FilterType): any => { // need to fix any
-if (filter === 'all'){
-    return affairs
-}
-else if (filter === 'high'){
- return   affairs.filter(t => t.priority === 'high')
-}
-else if( filter === 'middle'){
-  return   affairs.filter(t => t.priority === 'middle')
-}
-else if (filter === 'low'){
-  return   affairs.filter(t => t.priority === 'low')
-}
+export const filterAffairs = (affairs: AffairType[], filter: FilterType):any => { // need to fix any
+    if (filter === 'all') {
+        return affairs
+    }
+    if (filter === 'high') {
+        return affairs.filter(t => t.priority === 'high')
+    }
+    if (filter === 'middle') {
+        return affairs.filter(t => t.priority === 'middle')
+    }
+    if (filter === 'low') {
+        return affairs.filter(t => t.priority === 'low')
+    }
 
 
-
-
-     // need to fix
+    // need to fix
 }
-export const deleteAffair = (affairs: AffairType[], _id: number):AffairType[]=> { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
 
-    return affairs.filter((t)=>t._id !== _id ) // need to fix
+    return affairs.filter((t) => t._id !== _id) // need to fix
 }
 
 function HW2() {
@@ -64,13 +62,10 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
 
-
-
-
-   const filteredAffairs  = filterAffairs(affairs, filter)
+    const filteredAffairs = filterAffairs(affairs, filter)
 
     const deleteAffairCallback = (_id: number) => { // need to fix any
-      setAffairs(deleteAffair(affairs,_id))  // need to fix
+        setAffairs(deleteAffair(affairs, _id))  // need to fix
     }
 
 
@@ -79,7 +74,7 @@ function HW2() {
             <div className={s2.hwTitle}>Homework #2</div>
             <div className={s2.hw}>
                 <Affairs
-                    data={affairs}
+                    data={filteredAffairs}
                     setFilter={setFilter}
                     deleteAffairCallback={deleteAffairCallback}
                     filter={filteredAffairs}
