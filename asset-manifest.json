@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hws2-master/static/css/main.8922eb92.css",
-    "main.js": "/hws2-master/static/js/main.f3041010.js",
-    "static/js/787.66cb4309.chunk.js": "/hws2-master/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/hws2-master/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/hws2-master/index.html",
-    "main.8922eb92.css.map": "/hws2-master/static/css/main.8922eb92.css.map",
-    "main.f3041010.js.map": "/hws2-master/static/js/main.f3041010.js.map",
-    "787.66cb4309.chunk.js.map": "/hws2-master/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/yar/static/css/main.3cafa558.css",
+    "main.js": "/yar/static/js/main.73714c14.js",
+    "static/js/787.66cb4309.chunk.js": "/yar/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/yar/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/yar/index.html",
+    "main.3cafa558.css.map": "/yar/static/css/main.3cafa558.css.map",
+    "main.73714c14.js.map": "/yar/static/js/main.73714c14.js.map",
+    "787.66cb4309.chunk.js.map": "/yar/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8922eb92.css",
-    "static/js/main.f3041010.js"
+    "static/css/main.3cafa558.css",
+    "static/js/main.73714c14.js"
   ]
 }
