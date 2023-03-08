@@ -4,6 +4,7 @@ import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
+import {ReactJSXElement} from "@emotion/react/types/jsx-namespace";
 
 /*
 * 1 - описать тип MessageType
@@ -14,7 +15,25 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type MessageType ={
+ id : number;
+ user : UserType;
+    message : SecondMessageType;
+
+
+
+}
+type UserType = {
+    avatar : string;
+    name : string;
+}
+type SecondMessageType = {
+    text : string;
+    time : string;
+}
+
+
+
 
 // структуру объекта не менять
 export const message0: MessageType = {
@@ -31,7 +50,7 @@ export const message0: MessageType = {
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
+        avatar: avatar,
         name: 'Friend Name', // можно менять
     },
     message: {
@@ -59,3 +78,4 @@ const HW1 = () => {
 }
 
 export default HW1
+
