@@ -21,6 +21,7 @@ export const pureAddUser = (name: string, setError: (value: string) => void, set
         setName('')
 
 
+
     }// если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
@@ -70,7 +71,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = name// need to fix
+    const lastUserName = users[users.length]// need to fix
 
     return (
         <Greeting
