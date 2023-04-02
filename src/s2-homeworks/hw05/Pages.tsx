@@ -11,7 +11,7 @@ export const PATH = {
     JUNIOR_PLUS: '/junior-plus',
 }
 
-function Pages(props : any) {
+function Pages() {
     return (
         <div>
             {/*Routes выбирает первый подходящий роут*/}
@@ -26,7 +26,7 @@ function Pages(props : any) {
                 <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>} />
 
                 {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                <Route path={'/'} element={<Error404/>} />
+                <Route  element={<Error404/>} />
             </Routes>
         </div>
     )
