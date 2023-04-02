@@ -34,7 +34,7 @@ onChange?.(e)
     }
 
     const finalInputClassName = s.checkbox
-        + (className ? ' ' + className : '')
+        + (className ? s.checkbox : s.spanClassName)
 
     return (
         <label className={s.label}>

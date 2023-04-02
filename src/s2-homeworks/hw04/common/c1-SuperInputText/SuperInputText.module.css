@@ -2,15 +2,18 @@
 }
 
 .input {
+    color : blueviolet;
 }
 
 .inputWrapper {
 }
 
 .superInput {
+
 }
 
 .errorInput {
+    color : red
 }
 
 .errorInput:focus {
