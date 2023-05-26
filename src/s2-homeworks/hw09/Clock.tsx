@@ -35,8 +35,8 @@ setShow(false)
     const stringDate = date?.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = date?.toLocaleString() || <br/> // пишут студенты
-    const stringMonth = date?.toLocaleString() || <br/> // пишут студенты
+    const stringDay = Intl.DateTimeFormat(undefined, {weekday: 'long'}).format(date) || <br/> // пишут студенты
+    const stringMonth =  date?.toLocaleString('en-US', { month: 'long' }) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
