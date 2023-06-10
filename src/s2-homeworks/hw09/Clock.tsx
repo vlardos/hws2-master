@@ -8,7 +8,7 @@ function Clock() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
-
+    const [isSetInterval, setIsSetInterval] = useState<boolean>(false)
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
@@ -17,11 +17,14 @@ const id : number = +setInterval(()=>{
 },1000
     )
         setTimerId(id)
+        setIsSetInterval(true)
     }
 
     const stop = () => {
+
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-clearInterval(timerId)
+        setIsSetInterval(false)
+        clearInterval(timerId)
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
@@ -71,14 +74,14 @@ setShow(false)
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={show === true ? true : false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={isSetInterval ? true : false} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={show === false ? true : false} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={isSetInterval ? false : true} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
